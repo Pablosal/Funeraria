@@ -4,7 +4,7 @@
         <div class="row">
           <div class="col l4 s12">
             <h5 class="white-text center">
-              <img src="./assets/Img/Logotipos-01.png" height="100px" alt="" />
+            <img src="<?php echo get_template_directory_uri(); ?> /Img/Logotipos-01.png" alt="fondo-marca" height=100/>
             </h5>
            
           </div>

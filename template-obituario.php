@@ -1,24 +1,47 @@
-<?php get_header()?>
+<?php get_header();
 /*Template Name: Obituario*/
-<div class="column">
-      <div class="col s12 m6">
-        <div class="card blue-grey darken-1">
-          <div class="background card-content white-text center-align">
-            <img src="./assets/Img/Logotipos-01.png" alt="" class="back" />
-            <div class="centered">
-              <span class="card-title">Sicarioe Tito Arriagada</span>
-              <hr />
-              <p>
-                Padre amado, hijo querido y especial humano al servicio del
-                pastor sera velado en:
-              </p>
-              <h5>Parque del Recuerdo Américo Vespucio</h5>
-              <h5>12:00pm</h5>
-              <h5>Dirección Funeral: Av. Recoleta 4421-A Huechuraba</h5>
+$args = array(
+  'post_type'=> 'obituario',
+  'order' => 'DES',
+  'posts_per_page' => 5
+   );   
+$the_query = new WP_Query($args)
+?>
+<div class="col">
+    <div class="column">
+  <?php if($the_query->have_posts()){?>
+        <?php while($the_query->have_posts()) {?>
+            <?php $the_query->the_post();?>
+        <div class="col s12 m6 xl4  ">
+          <div class="card ">
+            <div class="background  card-content white-text center-align">
+              <img src="<?php echo get_template_directory_uri(); ?> /Img/Logotipos-01.png" alt="fondo-marca" class="back" />
+                <article class="centered" <?php post_class("c-post");?>>
+                          <?php funeraria_post_meta()?>
+                      <h2 class="card-title">
+                              <?php the_title(); ?>
+                      </h2>
+                      <div>
+                          <?php the_content();?>
+                      </div>
+                      <div>
+                          <?php the_excerpt();?>
+                      </div>
+                      <div class="card-action">
+                        <h5>Funeraria Isla Entrega sus condolencias</h5>
+                      </div>
+                </article>
+              </div>
             </div>
-            <div class="card-action"></div>
           </div>
-        </div>
-      </div>
-    </div>
+          <?php }?>
+          <?php the_posts_pagination(); ?>
+    <?php }else{?>
+            <p><?php esc_html_e('Sorry no posts matched your criteria.','Funeraria')?></p>        
+    <?php }?>
+
+</div>
+
+</div>
+
 <?php get_footer()?>

@@ -1,6 +1,6 @@
 <?php get_header()?>
     <!--Seccion de Carousel-->
-    <div class="carousel carousel-slider ">
+    <div class="carousel hero carousel-slider ">
       <a class="carousel-item"
         ><img src="./assets/Img/Frontis/20190802_164634.jpg"
       /></a>
@@ -143,28 +143,6 @@
 
 
 
-    <?php if(have_posts()){?>
-        <?php while(have_posts()) {?>
-            <?php the_post();?>
-            <article <?php post_class("c-post");?>>
-                <h2>
-                    <a href="<?php the_permalink();?>" title="<?php the_title_attribute();?>">
-                        <?php the_title(); ?>
-                    </a>
-                </h2>
-                <div>
-                    <?php funeraria_post_meta()?>
-                </div>
-                <div>
-                    <?php the_excerpt();?>
-                    
-                </div>
-                    <?php funeraria_readmore_link();?>
-            </article>
-        <?php }?>
-        <?php the_posts_pagination(); ?>
-    <?php }else{?>
-        <p><?php esc_html_e('Sorry no posts matched your criteria.','Funeraria')?></p>        
-    <?php }?>
+
 
 <?php get_footer()?>

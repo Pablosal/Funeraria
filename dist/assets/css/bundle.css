@@ -6,6 +6,10 @@
 body {
   background-color: #ececec;
 }
+.ALL {
+  height: 10vh;
+  margin-bottom: 40px;
+}
 html {
   scroll-behavior: smooth;
 }
@@ -17,6 +21,33 @@ html {
   color: white;
   align-items: center; /* new */
   justify-items: center;
+}
+.hero {
+  height: 90vh;
+}
+.nosotros__hero {
+  position: relative;
+  height: 90vh;
+  z-index: 0;
+  overflow: hidden;
+}
+.nosotros__hero--imagen {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+.nosotros--equipo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+.round {
+  background: #2e3131;
+  height: 170px;
+  width: 170px;
+  border-radius: 50%;
 }
 .card {
   height: 90%;
@@ -74,8 +105,10 @@ html {
 }
 .column {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
+  flex-direction: column;
   align-items: center;
+  overflow: hidden;
 }
 .background {
   position: relative;
@@ -98,4 +131,5 @@ html {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  color: black;
 }

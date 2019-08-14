@@ -8,6 +8,7 @@
     <?php wp_head();?>
 </head>
 <body <?php body_class();?>>
+<div class="ALL">
     <div class="clearfix">
       <span><i class="fas fa-phone-alt"></i>+569 75842226</span>
       <span><i class="fas fa-home"></i>Abierto las 24 horas.</span>
@@ -18,7 +19,7 @@
       <div class="mini-wrap">
         <a href="#!" class="brand-logo"
           ><img
-            src="./assets/Img/Logotipos-03.png"
+            src="<?php echo get_template_directory_uri(); ?> /Img/Logotipos-03.png"
             height="60px"
             alt="logo compañia"
         /></a>
@@ -31,5 +32,6 @@
         
       </div>
     </nav>
+</div>
 
     

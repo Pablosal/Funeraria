@@ -1,30 +1,21 @@
 <?php get_header()?>
     <!--Seccion de Carousel-->
-    <div class="carousel hero carousel-slider ">
-      <a class="carousel-item"
-        ><img src="./assets/Img/Frontis/20190802_164634.jpg"
-      /></a>
-      <a class="carousel-item" href="#two!"
-        ><img src="https://lorempixel.com/800/400/food/2"
-      /></a>
-      <a class="carousel-item" href="#three!"
-        ><img src="https://lorempixel.com/800/400/food/3"
-      /></a>
-      <a class="carousel-item" href="#four!"
-        ><img src="https://lorempixel.com/800/400/food/4"
-      /></a>
+    
+    <div class=" view">
+    <img class=" view__image" src="<?php echo get_template_directory_uri(); ?>. ./Img\Frontis\Front.jpg"
+          alt="superintendencia">
+          <div class="overlay">
+            <h1 class=" view__title">Te Acompañamos en todo momento </h1>
+          </div>
     </div>
-
     <!--Seccion de leer mas-->
     <h2 class="center-align">Funerarias Isla te informa</h2>
     <div id="Informacion" class="container row">
       <div class="col s12 m4">
         <div class="card ">
           <div class="card-image">
-            <img
-              class="card-image"
-              src="./assets/Img/CuotaMuortoria/superintendencia.jpg"
-            />
+          <img src="<?php echo get_template_directory_uri(); ?>. /Img/QueHacer/superintendencia.jpg"
+          alt="superintendencia" height="290px">
           </div>
           <div class="card-stacked">
             <div class="card-content">
@@ -41,10 +32,8 @@
       <div class="col  s12 m4">
         <div class="card ">
           <div class="card-image">
-            <img
-              class="card-image"
-              src="./assets/Img/CuotaMuortoria/Repatriacion.jpeg"
-            />
+          <img src="<?php echo get_template_directory_uri(); ?>. /Img/QueHacer/repatriacion .jpg"
+          alt="avion-repatriaciones"  height="290px">
           </div>
           <div class="card-stacked">
             <div class="card-content">
@@ -61,10 +50,8 @@
       <div class="col s12 m4">
         <div class="card ">
           <div class="card-image">
-            <img
-              class="card-image"
-              src="./assets/Img/CuotaMuortoria/cementerio.jpg"
-            />
+          <img src="<?php echo get_template_directory_uri(); ?>. /Img/QueHacer/cementerio.jpg"
+          alt="cementerio"  height="290px">
           </div>
           <div class="card-stacked">
             <div class="card-content">
@@ -85,9 +72,8 @@
       <div class="col s12 m4">
         <div class="card ">
           <div class="card-image  center">
-            <img
-              class="card-image card-image--response "
-              src="./assets/Img/Plano/mostrar2.png"
+          <img src="<?php echo get_template_directory_uri(); ?>. /Img/Servicios/plano.jpg"
+              class="card-image card-image--response " alt="servicio-plano"
             />
           </div>
           <div class="card-stacked">
@@ -102,11 +88,10 @@
       <div class="col s12 m4">
         <div class="card ">
           <div class="card-image center">
-            <img
-              class="card-image card-image--response"
-              src="./assets/Img/Medio/mostrar.png"
+          <img src="<?php echo get_template_directory_uri(); ?>. /Img/Servicios/medio.jpg"
+              class="card-image card-image--response " alt="servicio-plano"
             />
-          </div>
+        </div>
           <div class="card-stacked">
             <div class="card-content">
               <h5 class="center-align">
@@ -119,9 +104,8 @@
       <div class="col s12 m4">
         <div class="card ">
           <div class="card-image center">
-            <img
-              class="card-image card-image--response"
-              src="./assets/Img/ElegantPresident/mostrar-l.png"
+          <img src="<?php echo get_template_directory_uri(); ?>. /Img/Servicios/elegant.jpg"
+              class="card-image card-image--response " alt="servicio-plano"
             />
           </div>
           <div class="card-stacked">

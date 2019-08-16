@@ -4,5 +4,9 @@
   "main": "index.js",
   "repository": "https://github.com/Pablosal/Funeraria.git",
   "author": "Pablo Salgado <41828889+Pablosal@users.noreply.github.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.10.1"
+  }
 }

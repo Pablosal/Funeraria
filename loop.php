@@ -1,15 +1,4 @@
-<?php get_header();
-/*Template Name: Obituario*/
-$args = array(
-  'post_type'=> 'obituario',
-  'order' => 'DES',
-  'posts_per_page' => 5
-   );   
-$the_query = new WP_Query($args)
-?>
-<div class="col">
-    <div class="column">
-    <?php if($the_query->have_posts()){?>
+<?php if($the_query->have_posts()){?>
         <?php while($the_query->have_posts()) {?>
             <?php $the_query->the_post();?>
         <div class="col s12 m6 xl4  ">
@@ -39,8 +28,3 @@ $the_query = new WP_Query($args)
     <?php }else{?>
             <p><?php esc_html_e('Sorry no posts matched your criteria.','Funeraria')?></p>        
     <?php }?>
-
-    
-</div>
-
-<?php get_footer()?>

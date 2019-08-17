@@ -1,4 +1,7 @@
 <?php get_header()?>
+
+
+
     <!--Seccion de Carousel-->
     
     <div class=" view">
@@ -11,61 +14,43 @@
     <!--Seccion de leer mas-->
     <h2 class="center-align">Funerarias Isla te informa</h2>
     <div id="Informacion" class="container row">
-      <div class="col s12 m4">
-        <div class="card ">
-          <div class="card-image">
-          <img src="<?php echo get_template_directory_uri(); ?>. /Img/QueHacer/superintendencia.jpg"
-          alt="superintendencia" height="290px">
-          </div>
-          <div class="card-stacked">
-            <div class="card-content">
-              <h5 class="center-align">
-                ¿Sabes lo que es la Cuota Mortuoria y como obtenerla?
-              </h5>
-            </div>
-            <div class="card-action center-align">
-              <a class="waves-effect waves-light btn">Quiero Saber</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col  s12 m4">
-        <div class="card ">
-          <div class="card-image">
-          <img src="<?php echo get_template_directory_uri(); ?>. /Img/QueHacer/repatriacion .jpg"
-          alt="avion-repatriaciones"  height="290px">
-          </div>
-          <div class="card-stacked">
-            <div class="card-content">
-              <h5 class="center-align">
-                ¿Que debo hacer en caso de una repatriacion?
-              </h5>
-            </div>
-            <div class="card-action center-align">
-              <a class="waves-effect waves-light btn">Quiero Saber</a>
+    <?php $args = array(
+      'order' => 'DES',
+      'posts_per_page' => 3
+      );   
+    $the_query = new WP_Query($args);?>
+    <div class=" center-align row">
+          <?php if($the_query->have_posts()){?>
+            <?php while($the_query->have_posts()){?>
+                <?php $the_query->the_post(); 
+                    $featured_img_url = get_the_post_thumbnail_url(get_the_ID(),'medium'); 
+                    // var_dump($featured_img_url);
+                ?>
+          <div class="col s12 m4">
+            <div class="card ">
+              <div class="card-image">
+                  <img src="<?php echo $featured_img_url ?>" height="290px" alt=" <?php the_title(); ?>">
+              </div>
+              <div class="card-stacked">
+                <div class="card-content">
+                  <h5 class="center-align">
+                        <?php the_title(); ?>
+                  </h5>
+                </div>
+                <div class="card-action center-align">
+                  <a href="<?php the_permalink(); ?>" class="waves-effect waves-light btn">Quiero Saber</a>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
-      <div class="col s12 m4">
-        <div class="card ">
-          <div class="card-image">
-          <img src="<?php echo get_template_directory_uri(); ?>. /Img/QueHacer/cementerio.jpg"
-          alt="cementerio"  height="290px">
-          </div>
-          <div class="card-stacked">
-            <div class="card-content">
-              <h5 class="center-align">
-                ¿Que tramites debo hacer en el cementerio?
-              </h5>
-            </div>
-            <div class="card-action center-align">
-              <a class="waves-effect waves-light btn">Quiero Saber</a>
-            </div>
-          </div>
-        </div>
-      </div>
+            <?php } ?>
+        <?php }else{?>
+                <p><?php esc_html_e('No Hay ningun posteo, pronto escribiremos.','Funeraria')?></p>        
+        <?php }?>
     </div>
+    </div>
+
+</div>
     <!--Seccion de servicios-->
     <h3 class="center-align">Nuestros Servicios</h3>
     <div id="Servicios" class="container row ">

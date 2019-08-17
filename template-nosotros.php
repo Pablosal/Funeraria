@@ -19,7 +19,7 @@ $nosotros = get_field('us');
             <div class="nosotros--equipo--individuo">
                 <div class="round">
                     <picture>
-                        <img src="<?php echo $nosotros["funcionario--1"]?>" alt="Funcionario">
+                        <img class="round__image" src="<?php echo $nosotros["funcionario--1"]?>" alt="Funcionario">
                     </picture>
                 </div>
                    

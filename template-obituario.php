@@ -40,7 +40,10 @@ $the_query = new WP_Query($args)
             <p><?php esc_html_e('Sorry no posts matched your criteria.','Funeraria')?></p>        
     <?php }?>
 
-    
-</div>
+      <div class="row">
+        <div class="col s12">
+          <?php get_sidebar('primary-sidebar'); ?>    
+        </div>
+      </div>
 
 <?php get_footer()?>

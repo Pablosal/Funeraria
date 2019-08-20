@@ -4,7 +4,7 @@ $services_layout = '3,3,3';
 $columns = explode(',',$services_layout);
 ?>
 <div class="container">
-    <div class="row">
+    <div class="row center-align">
         <?php foreach($columns as $i => $column){?>
             <div class="row">
              

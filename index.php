@@ -6,11 +6,16 @@
 
     <!--Seccion de Carousel-->
     
-    <div class=" view">
-    <img class=" view__image" src="<?php echo get_template_directory_uri(); ?>. ./Img\Frontis\Front.jpg"
-          alt="superintendencia">
-          <div class="overlay">
-            <h1 class=" view__title">Te Acompañamos en todo momento </h1>
+    <div class=" view ">
+        <img class=" view__image" src="<?php echo $servicios['hero']?>"
+          alt="Hero_funeraria">
+          <div class="overlay ">
+            <div class="container">
+
+              <img class=" view__image" src="<?php echo $servicios['hero_frontimage']?>"
+                alt="Hero_frontimage">
+                  <h1 class=" view__title center-align"><?php echo $servicios['hero_title']?></h1>
+            </div>
           </div>
     </div>
     <!--Seccion de leer mas-->

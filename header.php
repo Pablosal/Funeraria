@@ -15,15 +15,15 @@
       <span><i class="fas fa-map-marker-alt"></i> Pisagua 245, Curacautin</span>
     </div>
     <nav id="nav" role="navigation">
-      <div class="nav-wrapper">
       <div class="mini-wrap">
-        <a href="#!" class="brand-logo"
-          ><img
-            src="<?php echo get_template_directory_uri(); ?> /Img/Logotipos-03.png"
-            height="60px"
-            alt="logo compañia"
-        /></a>
+        <?php if(has_custom_logo()){
+          the_custom_logo();
+        }else{?>
+          <a href="<?php echo esc_url(home_url('/'))?>" class="brand-logo"
+            ><?php esc_html(bloginfo('name'));?></a>
+        <?php }?>
       </div>
+      <div class="nav-wrapper">
       <div class="wrapy">
           <?php wp_nav_menu(array('theme_location'=>'main-menu'));?>
       </div>

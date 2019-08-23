@@ -12,8 +12,6 @@
           <div class="overlay ">
             <div class="container">
 
-              <img class=" view__image" src="<?php echo $servicios['hero_frontimage']?>"
-                alt="Hero_frontimage">
                   <h1 class=" view__title center-align"><?php echo $servicios['hero_title']?></h1>
             </div>
           </div>
@@ -64,7 +62,7 @@
       <div class="col s12 m4">
         <div class="card ">
           <div class="card-image  center">
-          <img src="<?php echo get_template_directory_uri(); ?>. /Img/Servicios/plano.jpg"
+          <img src="<?php echo esc_url( get_theme_mod( 'image-option' ) ); ?>"
               class="card-image card-image--response " alt="servicio-plano"
             />
           </div>
@@ -80,7 +78,7 @@
       <div class="col s12 m4">
         <div class="card ">
           <div class="card-image center">
-          <img src="<?php echo get_template_directory_uri(); ?>. /Img/Servicios/medio.jpg"
+          <img src="<?php echo esc_url( get_theme_mod( 'image-option-2' ) ); ?>"
               class="card-image card-image--response " alt="servicio-plano"
             />
         </div>
@@ -96,7 +94,7 @@
       <div class="col s12 m4">
         <div class="card ">
           <div class="card-image center">
-          <img src="<?php echo get_template_directory_uri(); ?>. /Img/Servicios/elegant.jpg"
+          <img src="<?php echo esc_url( get_theme_mod( 'image-option-3' ) ); ?>"
               class="card-image card-image--response " alt="servicio-plano"
             />
           </div>

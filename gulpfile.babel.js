@@ -11,24 +11,24 @@ const PRODUCTION = yargs.argv.prod;
 
 const paths = {
   styles: {
-    src: '',
-    dest: ''
+    src: 'dist/assets/css/bundle.css',
+    dest: 'pack/assets/css/bundle.css'
   },
   images: {
-    src: '/**/*,{jpg,jpeg,png,svg,gif}',
-    dest: ''
+    src: 'Img/**/*,{jpg,jpeg,png,svg,gif}',
+    dest: 'pack/assets/Img'
   },
   scripts: {
-    src: '',
-    dest: ''
+    src: 'dist/assets/js/bundle.js',
+    dest: 'pack/assets/js/bundle.js'
   },
   others: {
     src: [
-      'src/assets/**/*',
-      '!src/assets/{images,js,css}',
-      '!src/assets/{images,js,css}/**/*'
+      'dist/assets/**/*',
+      '!dist/assets/{images,js,css}',
+      '!dist/assets/{images,js,css}/**/*'
     ],
-    dest: ''
+    dest: 'pack/assets/**/*'
   },
   package: {
     src: [
@@ -48,15 +48,15 @@ const paths = {
 };
 export const styles = () => {
   return gulp
-    .src('')
+    .src(paths.styles.src)
     .pipe(gulpif(!PRODUCTION, sourcemaps.init()))
     .pipe(gulpif(PRODUCTION, cleanCSS({ compatibility: 'ie8' })))
     .pipe(gulpif(!PRODUCTION, sourcemaps.write()))
-    .pipe(gulp.dest(''));
+    .pipe(gulp.dest(paths.styles.dest));
 };
 export const images = () => {
   return gulp
-    .src('')
+    .src(paths.images.src)
     .pipe(gulpif(PRODUCTION, imagemin()))
     .pipe(gulp.dest(paths.images.dest));
 };
@@ -91,3 +91,4 @@ export const compress = () => {
     .pipe(zip('funeraria.zip'))
     .pipe(gulp.dest(paths.package.dest));
 };
+//
